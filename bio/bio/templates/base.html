@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'css/elements/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Dionisiu Brovka | {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        {% include 'elements/header/header.html' %}
+    </header>
+    <nav>
+        {% include 'elements/nav/nav.html' %}
+    </nav>
+    <main>
+        <div id="content" class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+        {% include 'elements/footer/footer.html' %}
+    </footer>
+
+    <!-- add scripts -->
+    <script src="{% static 'js/code_fx/code_fx.js' %}"></script>
+</body>
+
+</html>
